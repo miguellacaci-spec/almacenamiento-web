@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipos de Almacenamiento de Datos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-blue-600 text-white p-6">
+    <h1 class="text-2xl font-bold text-center">Tipos de Almacenamiento de Datos</h1>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- 🔹 Sección Filtro -->
+    <section id="filtro">
+      <h2 class="text-xl font-semibold mb-4">Filtro</h2>
+      <input type="text" placeholder="Filtrar por palabra clave..."
+             class="w-full border p-2 rounded shadow-sm" />
+    </section>
+
+    <!-- 🔹 Sección Tarjetas -->
+    <section id="tarjetas">
+      <h2 class="text-xl font-semibold mb-4">Tarjetas de Almacenamiento</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white shadow rounded p-4">
+          <h3 class="font-bold">Disco Duro (HDD)</h3>
+          <p class="text-sm mt-2">Almacenamiento magnético tradicional.</p>
+        </div>
+        <div class="bg-white shadow rounded p-4">
+          <h3 class="font-bold">Unidad de Estado Sólido (SSD)</h3>
+          <p class="text-sm mt-2">Almacenamiento rápido en memoria flash.</p>
+        </div>
+        <div class="bg-white shadow rounded p-4">
+          <h3 class="font-bold">Almacenamiento en la Nube</h3>
+          <p class="text-sm mt-2">Acceso remoto desde internet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 Sección Tabla Comparativa -->
+    <section id="tabla">
+      <h2 class="text-xl font-semibold mb-4">Tabla Comparativa</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border text-sm">
+          <thead class="bg-blue-100">
+            <tr>
+              <th class="border px-4 py-2">Tipo</th>
+              <th class="border px-4 py-2">Velocidad</th>
+              <th class="border px-4 py-2">Capacidad</th>
+              <th class="border px-4 py-2">Costo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">HDD</td>
+              <td class="border px-4 py-2">Baja</td>
+              <td class="border px-4 py-2">Alta</td>
+              <td class="border px-4 py-2">Bajo</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border px-4 py-2">SSD</td>
+              <td class="border px-4 py-2">Alta</td>
+              <td class="border px-4 py-2">Media</td>
+              <td class="border px-4 py-2">Medio</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">Nube</td>
+              <td class="border px-4 py-2">Variable</td>
+              <td class="border px-4 py-2">Escalable</td>
+              <td class="border px-4 py-2">Suscripción</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 🔹 Sección Glosario -->
+    <section id="glosario">
+      <h2 class="text-xl font-semibold mb-4">Glosario</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>HDD:</strong> Disco Duro, almacenamiento magnético.</li>
+        <li><strong>SSD:</strong> Unidad de estado sólido, memoria flash rápida.</li>
+        <li><strong>Nube:</strong> Servicio de almacenamiento remoto.</li>
+      </ul>
+    </section>
+
+    <!-- 🔹 Sección Quiz -->
+    <section id="quiz">
+      <h2 class="text-xl font-semibold mb-4">Mini Quiz</h2>
+      <p class="mb-2">¿Cuál es más rápido: HDD o SSD?</p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Mostrar respuesta
+      </button>
+      <p id="respuesta" class="mt-2 text-green-600 font-semibold hidden">
+        El SSD es más rápido.
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-200 text-center py-4 text-sm">
+    © 2025 - Web educativa sobre almacenamiento de datos
+  </footer>
+
+  <script>
+    // JS mínimo para el quiz
+    document.querySelector("button").addEventListener("click", () => {
+      document.getElementById("respuesta").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
